@@ -1,0 +1,43 @@
+body
+{
+  background: #05627F;
+}
+.top
+{
+  max-width: 60%;
+  max-height: 800px;
+  display: flex;
+  list-style:none;
+  margin: auto;
+  background: cyan;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  padding: 10px
+
+}
+.top ul
+{
+  position: relative;
+  display: flex;
+}
+.top ul li
+{
+  list-style: none;
+}
+.top ul li a
+{
+  text-decoration: none;
+  display: block;
+  color: red;
+  padding: 1em;
+}
+.bottom
+{
+  max-width: 100%;
+  max-height: 50%;
+  background: cyan;
+  display: flex;
+  position: absolute;
+  bottom: 20px;
+  
+}
