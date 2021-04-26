@@ -1,14 +1,24 @@
-header ul{
+.top ul{
   position: relative;
-  display: flex;
+  display: flex;\
+  background: green:
 }
-header ul li{
+.top ul li{
   list-style: none;
 }
-header ul li a{
+.top ul li a{
   display: inline-block;
   color: #333;
   font-weight: 400;
   margin-left: 40px;
   text-decoration: none;
+}
+form
+{
+  background: green;
+  color: orange;
+}
+.bottom p
+{
+  
 }
