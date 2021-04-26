@@ -1,0 +1,24 @@
+.top ul{
+  position: relative;
+  display: flex;\
+  background: green:
+}
+.top ul li{
+  list-style: none;
+}
+.top ul li a{
+  display: inline-block;
+  color: #333;
+  font-weight: 400;
+  margin-left: 40px;
+  text-decoration: none;
+}
+form
+{
+  background: green;
+  color: orange;
+}
+.bottom p
+{
+  
+}
