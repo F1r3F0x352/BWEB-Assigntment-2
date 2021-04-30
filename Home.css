@@ -1,0 +1,311 @@
+@import 'https://fonts.googleapis.com/css?family=Montserrat:300, 400, 700&display=swap';
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+/*Testing---------------------------------------------------------------------*/
+body {
+  background-image: url(./img/Background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top center;
+  position: relative;
+  z-index: 1;
+}
+/*Testing---------------------------------------------------------------------*/
+html {
+	font-size: 10px;
+	font-family: 'Montserrat', sans-serif;
+	scroll-behavior: smooth;
+}
+a {
+	text-decoration: none;
+}
+.container {
+	min-height: 100vh;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+p {
+	color: black;
+	font-size: 1.4rem;
+	margin-top: 5px;
+	line-height: 2.5rem;
+	font-weight: 300;
+	letter-spacing: .05rem;
+}
+
+/*Header----------------------------------------------------------------------*/
+.brand h1 {
+	font-size: 3rem;
+	text-transform: uppercase;
+	color: white;
+  margin-left: 20px;
+}
+.brand h1 span {
+	color: crimson;
+}
+#header{
+  position: fixed;
+  z-index:1000;
+  left:0;
+  top:0;
+  width:100vw;
+  height:auto;
+}
+
+#header .header{
+  min-height: 8vh;
+  background-color:rgba(31, 30, 30, 0.24);
+}
+
+.header .nav-bar{
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+  width:100%;
+  height: 100%;
+  padding:0 10px;
+}
+#header .nav-list ul{
+  list-style: none;
+  position: absolute;
+  background-color:rgba(31, 30, 30);
+  width: 100vw;
+  height: 100vh;
+  left:100%;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items:center;
+  z-index:1;
+  overflow-x:hidden;
+}
+
+/*Header.active show when click-----------------------------------------------*/
+#header .nav-list ul.active{
+  left:0;
+  transition: .7s ease left;
+}
+/*End Header.active-----------------------------------------------------------*/
+
+#header .nav-list ul a{
+  font-size: 2.5rem;
+  font-weight: 500;
+  letter-spacing:.2rem;
+  text-decoration: none;
+  color:white;
+  text-transform:uppercase;
+  padding:20px;
+  display:block;
+}
+/*Hover-----------------------------------------------------------------------*/
+#header .nav-list ul a::after{
+  content: attr(data-after);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  color: rgba(240, 248, 255, 0.021);
+  font-size: 13rem;
+  letter-spacing: 50px;
+  z-index:-1;
+  transition: .3s ease letter-spacing;
+}
+
+#header .nav-list ul li:hover a::after{
+  transform: translate(-50%, -50%) scale(1);
+  letter-spacing: initial;
+}
+
+#header .nav-list ul li:hover a{
+  color:crimson;
+}
+
+/*hamburger menu--------------------------------------------------------------*/
+#header .hamburger{
+  height: 60px;
+  width: 60px;
+  display: inline-block;
+  border: 3px solid white;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index:100;
+  cursor: pointer;
+  transform: scale(.7);
+  margin-right: 20px;
+}
+/*hamburger css pulse + keyframes---------------------------------------------*/
+#header .hamburger:after{
+  position: absolute;
+  content: '';
+  height: 100%;
+  width:100%;
+  border-radius: 50%;
+  border: 3px solid white;
+  animation: hamburger_puls 1s ease infinite;
+}
+/*end hamburger css pulse-----------------------------------------------------*/
+#header .hamburger .bar{
+  height: 2px;
+  width: 30px;
+  position: relative;
+  background-color: white;
+  z-index: -1;
+}
+
+#header .hamburger .bar::after,
+#header .hamburger .bar::before{
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  background-color: white;
+  transition: .3s ease;
+  transition-property: top, bottom;
+}
+
+#header .hamburger .bar::after{
+  top:8px;
+}
+
+#header .hamburger .bar::before{
+  bottom:8px;
+}
+
+/*hamburger active------------------------------------------------------------*/
+#header .hamburger.active .bar::before{
+    bottom: 0;
+}
+#header .hamburger.active .bar::after{
+    top: 0;
+}
+
+/*End Header------------------------------------------------------------------*/
+
+.circle{
+  position:absolute;
+  top: 0;
+  left: 0;
+  width:100%;
+  height: 108%; /*TESTING*/
+  background: #017143;
+  clip-path:circle(550px at right 900px);
+}
+
+/*Content---------------------------------------------------------------------*/
+#content{
+  position: relative;
+  top:50px;
+  right:150px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#content h1{
+  display: block;
+  width: fit-content;
+  font-size: 4rem;
+  line-height: 1.4em;
+  position: relative;
+  color: crimson;
+}
+
+#content h2{
+  display: block;
+  width: fit-content;
+  font-size: 2em;
+  position: relative;
+  color: white;
+}
+
+
+#content p{
+  justify-content: center;
+  margin: 0 auto;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+/*Main Img size---------------------------------------------------------------*/
+.imgbox img{
+  max-width: 340px;
+}
+/*Main Img size---------------------------------------------------------------*/
+
+.thumb{
+  position: absolute;
+  left: 50%;
+  bottom: 10%;
+  transform: translateX(0);
+  display: flex;
+}
+
+.thumb li{
+  list-style: none;
+  display: inline-block;
+  margin:  0 20px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.thumb li:hover{
+  transform: translateY(-15px);
+}
+/*thumbnail Img size----------------------------------------------------------*/
+.thumb li img{
+  max-width:60px;
+}
+/*thumbnail Img size----------------------------------------------------------*/
+/*End Content-----------------------------------------------------------------*/
+
+/*KEYFRAME*/
+@keyframes hamburger_puls {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+}
+/*END KEYFRAME----------------------------------------------------------------*/
+
+/*MEDIA DESKTOP---------------------------------------------------------------*/
+
+@media only screen and (min-width:1200px) {
+  #header .hamburger{
+    display: none;
+  }
+  #header .nav-list ul{
+    position: initial;
+    display: block;
+    height: auto;
+    width: fit-content;
+    background-color:transparent;
+  }
+  #header .nav-list ul a:after{
+    display: none;
+  }
+  #header .nav-list ul li{
+    display: inline-block;
+  }
+  #header .nav-list ul li{
+    font-size: 1.8rem;
+  }
+  #header .nav-list ul:after{
+    display: none;
+  }
+}
