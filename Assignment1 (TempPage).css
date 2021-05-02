@@ -180,6 +180,17 @@ p {
 	opacity: .7;
 	z-index: -1;
 }
+.Templets ul li img
+{
+	padding: 10px;
+	height: 620px;
+	width: 437px;
+}
+.content
+{
+	width: 100vh;
+	height: 100vh;
+}
 
 /* Footer */
 #footer {
