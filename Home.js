@@ -28,8 +28,3 @@ menu_item.forEach((item) => {
 function imgSlider(anything){
 	document.querySelector('.imageMain').src = anything;
 }
-
-function changeCircleColor(color){
-	const cicle = document.querySelector('.circle');
-	cicle.style.background = color;
-}
