@@ -214,6 +214,16 @@ h1{
 
 /*---------------------------------END TITLE----------------------------------*/
 
+p{
+  font-size: 1.5em;
+  color: White;
+  margin-bottom: 20px;
+}
+
+
+#User1 .TextBox{
+  float: left;
+}
 /*-----------------------------------USER1------------------------------------*/
 #User1{
   grid-area: User1;
@@ -227,7 +237,7 @@ h1{
   align-items: center;
   justify-content: center;
   border: 1px solid;
-  background: linear-gradient(to right, violet, violet, violet, violet, purple)
+  background-color:rgba(31, 30, 30, 0.90);
 }
 
 /*---------------------------------END TITLE----------------------------------*/
@@ -245,7 +255,7 @@ h1{
   align-items: center;
   justify-content: center;
   border: 1px solid;
-  background: linear-gradient(to right, purple, violet, violet, violet, violet)
+  background-color:rgba(31, 30, 30, 0.90);
 }
 
 /*---------------------------------END TITLE----------------------------------*/
@@ -263,7 +273,7 @@ h1{
   align-items: center;
   justify-content: center;
   border: 1px solid;
-  background: linear-gradient(to right, violet, violet, violet, violet, purple)
+  background-color:rgba(31, 30, 30, 0.90);
 }
 
 /*---------------------------------END TITLE----------------------------------*/
@@ -316,6 +326,21 @@ h3{
 
   #Title{
     font-size: 1em;
+    height: 70px;
+    width: 400px;
+  }
+
+  #User1{
+    height: 250px;
+    width: 400px;
+  }
+  #User2{
+    height: 250px;
+    width: 400px;
+  }
+  #User3{
+    height: 250px;
+    width: 400px;
   }
 /*-------------------------------END MOBILE-----------------------------------*/
 
