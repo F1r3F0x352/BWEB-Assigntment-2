@@ -6,7 +6,7 @@
     <meta content="IE=edge,chrome=1">
     <meta name="HandheldFriendly" content="true">
     <title>Informal Page</title>
-      <link rel="stylesheet" href="Template.css" />
+      <link rel="stylesheet" href="template.css" />
 
   </head>
   <body>
@@ -44,14 +44,28 @@
 
     <div id ="Text">
       <div class="TextBox">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-           ut aliquip ex ea commodo consequat.
-           Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-           dolore eu fugiat nulla pariatur.
-           Excepteur sint occaecat cupidatat non proident,
-          sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <div class="selection">
+          <h3>Choose your background:</h3>
+          <img src="informal 1.png" id="styleOne">
+          <img src="informal 2.png" id="styleTwo">
+        </div>
+
+        <div class="greetingsList">
+          <h3>Click on greetings list below to insert on preview cards</h3>
+          <div id="greetOne" class="gList"style="margin-top:10px;">Assalamu'alaikum Warahmatullahi Wabarakatuh</div>
+          <div id="greetTwo" class="gList"style="margin-top:10px;">Salam Sejahtera!</div>
+          <div id="greetThree" class="gList"style="margin-top:10px;">Hello!</div>
+          <div id="greetFour" class="gList"style="margin-top:10px;">Greetings!</div>
+          <div id="greetFive" class="gList"style="margin-top:10px;">Good day!</div>
+        </div>
+
+          <p><label> </label><input type="text" id="nameInput" placeholder="Name"></p>
+          <p><label> </label><input type="text" id="birthdayPersonInput" placeholder="Afiq"/></p>
+      		<p><label> </label><input type="date" id="dateInput" placeholder="Date"></p>
+      		<p><label> </label><input type="text" id="timeInput" placeholder="Time"></p>
+          <p><label> </label><input type="text" id="locationInput" placeholder="Location"></p>
+          <button class="button">Save</button>
+          <button class="button1">Load previous input data</button>
 
       </div>
     </div>
@@ -66,11 +80,17 @@
 
     <!--  -->
     <div id ="Form">
-        <div class="TextForm">
-
-
-
-        </div>
+      <div id="templatebox" class="edittemplatebox">
+          <h1 id="greetings_result" style="text-align: center;">Your greeting here!</h1>
+          <div id="nameOutput" class="template">Name</div>
+          <h2>Your Invited to</h2>
+          <span id="birthdayPersonOutput" class="template">Afiq</span><span>'s Birthday</span>
+      		<p>On</p>
+          <span id="dateOutput" class="template">Date</span>
+      		<span>From </span><span id="timeOutput" class="template"> : - : </span>
+      		<p>At</p>
+          <div id="locationOutput" class="template">Location</div>
+      </div>
     </div>
 
 
@@ -83,5 +103,60 @@
     <!--  -->
     </div>
     <script src="./Home.js"></script>
+    <script type="text/javascript">
+      styleOne.addEventListener("click",letter =>{document.getElementById("templatebox").style.backgroundImage = "url('informal 1.png')";})
+      styleTwo.addEventListener("click",letter =>{document.getElementById("templatebox").style.backgroundImage = "url('informal 2.png')";})
+
+      var input = document.getElementById("nameInput"); 	//inputnya
+      var input2 = document.getElementById("dateInput");
+      var input3 = document.getElementById("timeInput");
+      var input4 = document.getElementById("locationInput");
+      var input5 = document.getElementById("birthdayPersonInput");
+
+      var display = document.getElementById("nameOutput");		//outputnya or displaynya
+      var display2 = document.getElementById("dateOutput");
+      var display3 = document.getElementById("timeOutput");
+      var display4 = document.getElementById("locationOutput");
+      var display5 = document.getElementById("birthdayPersonOutput");
+
+      var button = document.querySelector('.button');		//buttton save
+      var button1 = document.querySelector('.button1');
+
+      input.addEventListener('input', letter =>{display.textContent = letter.target.value;}) //apa yang ia taip arh "inputnya" ia kluar arah text which is "display"
+      input2.addEventListener('input', letter2 =>{display2.textContent = letter2.target.value;})
+      input3.addEventListener('input', letter3 =>{display3.textContent = letter3.target.value;})
+      input4.addEventListener('input', letter4 =>{display4.textContent = letter4.target.value;})
+      input5.addEventListener('input', letter5 =>{display5.textContent = letter5.target.value;})
+
+      var savetolocalstorage = save =>{
+        localStorage.setItem("nameInput",display.textContent)
+        localStorage.setItem("dateInput",display2.textContent)
+        localStorage.setItem("timeInput",display3.textContent)
+        localStorage.setItem("locationInput",display4.textContent)
+        localStorage.setItem("birthdayPersonInput",display5.textContent)
+      }
+      var loadlocalstorage = load =>{
+        nameInput.value = localStorage.getItem("nameInput")
+        dateInput.value = localStorage.getItem("dateInput")
+        timeInput.value = localStorage.getItem("timeInput")
+        locationInput.value = localStorage.getItem("locationInput")
+        birthdayPersonInput.value = localStorage.getItem("birthdayPersonInput")
+
+        nameOutput.innerHTML = localStorage.getItem("nameInput");
+        dateOutput.innerHTML = localStorage.getItem("dateInput");
+        timeOutput.innerHTML = localStorage.getItem("timeInput");
+        locationOutput.innerHTML = localStorage.getItem("locationInput");
+        birthdayPersonOutput.innerHTML = localStorage.getItem("birthdayPersonInput");
+      }
+      button.addEventListener('click',savetolocalstorage)
+      button1.addEventListener('click',loadlocalstorage)
+
+      greetOne.addEventListener("click", letter => {document.getElementById("greetings_result").innerHTML = "Assalamu'alaikum Warahmatullahi Wabarakatuh";})
+      greetTwo.addEventListener("click", letter => {document.getElementById("greetings_result").innerHTML = "Salam Sejahtera!";})
+      greetThree.addEventListener("click", letter => {document.getElementById("greetings_result").innerHTML = "Hello!";})
+      greetFour.addEventListener("click", letter => {document.getElementById("greetings_result").innerHTML = "Greetings!";})
+      greetFive.addEventListener("click", letter => {document.getElementById("greetings_result").innerHTML = "Good Day!";})
+
+    </script>
   </body>
 </html>
