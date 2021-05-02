@@ -13,7 +13,7 @@
 
     <div class="container">
 
-    <!--  -->
+    <!--HEADER-->
 
     <div id="header">
 
@@ -40,23 +40,40 @@
         </div>
 
     </div>
-    <!--  -->
+    <!--END HEADER-->
+
+    <!--TEXT-->
 
     <div id ="Text">
       <div class="TextBox">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-           ut aliquip ex ea commodo consequat.
-           Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-           dolore eu fugiat nulla pariatur.
-           Excepteur sint occaecat cupidatat non proident,
-          sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <div class="selection">
+          <h3>Choose your background:</h3>
+          <img src="./img/Corporate 1.png" id="styleOne">
+          <img src="./img/Corporate 2.png" id="styleTwo">
+        </div>
+
+        <div class="greetingsList">
+          <h3>Choose the greeting below</h3>
+          <div id="greeting1" class="gList"style="margin-top:10px;">Assalamu'alaikum Warahmatullahi Wabarakatuh</div>
+          <div id="greeting2" class="gList"style="margin-top:10px;">Good day!</div>
+          <div id="greeting3" class="gList"style="margin-top:10px;">Greetings!</div>
+          <div id="greeting4" class="gList"style="margin-top:10px;">Hello!</div>
+        </div>
+
+          <p><label> </label><input type="text" id="nameInput" placeholder="Name"></p>
+          <p><label> </label><input type="text" id="birthdayPersonInput" placeholder="Afiq"/></p>
+      		<p><label> </label><input type="date" id="dateInput" placeholder="Date"></p>
+      		<p><label> </label><input type="text" id="timeInput" placeholder="Time"></p>
+          <p><label> </label><input type="text" id="locationInput" placeholder="Location"></p>
+          <button class="button">Save</button>
+          <button class="button1">Load previous input data</button>
 
       </div>
     </div>
 
-    <!--  -->
+
+    <!--END TEXT-->
+    <!--TITLE-->
 
     <div id ="Title">
 
@@ -64,24 +81,42 @@
 
     </div>
 
-    <!--  -->
+    <!--END TITLE-->
+
+    <!--FORM-->
+
     <div id ="Form">
-        <div class="TextForm">
-
-
-
+      <div id = "templatearea" class="edittemplatebox">
+        <div id="templatebox" >
+            <h1 id="greetings_result" style="text-align: center;">Your greeting here!</h1>
+            <div id="nameOutput" class="template">Name</div>
+            <h2>Your Invited to</h2>
+            <span id="birthdayPersonOutput" class="template, birthday">Afiq</span><span class = "birthday">'s Birthday</span>
+        		<p>On</p>
+            <span id="dateOutput" class="template">Date</span>
+        		<span>From </span><span id="timeOutput" class="template"> : - : </span>
+        		<p>At</p>
+            <div id="locationOutput" class="template">Location</div>
         </div>
+      </div>
     </div>
 
 
-    <!--  -->
+    <!--END FORM-->
+
+    <!--FOOTER-->
+
     <div id ="Footer">
       <h3>Group 06 (DITN11)</h3>
     </div>
 
 
-    <!--  -->
+    <!--END FOOTER-->
+
+    <!--JAVA-->
     </div>
     <script src="./Home.js"></script>
+    <script src="./FormCorporate.js"></script>
+    <!--END JAVA-->
   </body>
 </html>
