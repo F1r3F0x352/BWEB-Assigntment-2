@@ -396,11 +396,29 @@ h3{
 	}
 
 	#templatebox{
-
 		font-size: 1.2em;
 		padding-top: 90px;
 	}
 
+	.birthday{
+		font-size: 30px;
+	}
+
+	.time{
+		font-size: 20px;
+		line-height: 1vh;
+
+	}
+
+	.normaltext{
+		font-size: 10px;
+		line-height: 5vh;
+	}
+
+	.location{
+		font-size: 20px;
+		line-height: 4vh;
+	}
 /*-------------------------------END MOBILE-----------------------------------*/
 
 /*---------------------------------DESKTOP------------------------------------*/
