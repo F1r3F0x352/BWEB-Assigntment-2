@@ -337,9 +337,7 @@ img{
 
 	}
 
-
-
-	#Title{
+#Title{
 		position: initial;
 		padding-top: 20%;
     align-items: center;
@@ -411,7 +409,7 @@ img{
 
 /*---------------------------------DESKTOP------------------------------------*/
 
-@media only screen and (min-width:1200px) {
+@media only screen and (min-width:1200px){
   #header .hamburger{
     display: none;
   }
@@ -436,3 +434,11 @@ img{
   }
 }
 /*-------------------------------END DESKTOP----------------------------------*/
+
+/*--------------------------------REFERENCE-----------------------------------*/
+https://www.youtube.com/watch?v=ZFQkb26UD1Y&t=9498s
+https://stackoverflow.com/questions/45536537/centering-in-css-grid
+https://www.youtube.com/watch?v=lAOkx2yZESY&t=300s
+https://www.youtube.com/watch?v=68O6eOGAGqA
+https://www.youtube.com/watch?v=91Q6RvKvd7o
+/*------------------------------END REFERENCE---------------------------------*/
