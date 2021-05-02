@@ -1,25 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
 * {
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
 }
 /*-------------------------------shah's template------------------------------*/
-#template-area {
-  -webkit-flex: 3;
-  -ms-flex: 3;
-  flex: 3;
-  background-color: #f1f1f1;
-  padding: 10px;
-}
-
-#templatebox {
-  margin: auto;
+#templatearea {
+	margin: auto;
   padding-top: 220px;
   width: 595px;
   height: 842px;
   text-align: center;
   border: solid;
   background-color: white;
+}
+
+#templatebox {
+
 }
 
 .edittemplatebox{
@@ -40,8 +38,8 @@ div.template {
   text-align: center;
 }
 
-#greetOne:hover, #greetTwo:hover,
-#greetThree:hover, #greetFour:hover, #greetFive:hover{
+#greeting1:hover, #greeting2:hover,
+#greeting3:hover, #greeting4:hover{
   background-color: grey;
   color: #D1ddd9;
 }

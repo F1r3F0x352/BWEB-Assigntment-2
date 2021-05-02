@@ -51,12 +51,11 @@
         </div>
 
         <div class="greetingsList">
-          <h3>Click on greetings list below to insert on preview cards</h3>
-          <div id="greetOne" class="gList"style="margin-top:10px;">Assalamu'alaikum Warahmatullahi Wabarakatuh</div>
-          <div id="greetTwo" class="gList"style="margin-top:10px;">Salam Sejahtera!</div>
-          <div id="greetThree" class="gList"style="margin-top:10px;">Hello!</div>
-          <div id="greetFour" class="gList"style="margin-top:10px;">Greetings!</div>
-          <div id="greetFive" class="gList"style="margin-top:10px;">Good day!</div>
+          <h3>Choose the greeting below</h3>
+          <div id="greeting1" class="gList"style="margin-top:10px;">Assalamu'alaikum Warahmatullahi Wabarakatuh</div>
+          <div id="greeting2" class="gList"style="margin-top:10px;">Good day!</div>
+          <div id="greeting3" class="gList"style="margin-top:10px;">Greetings!</div>
+          <div id="greeting4" class="gList"style="margin-top:10px;">Hello!</div>
         </div>
 
           <p><label> </label><input type="text" id="nameInput" placeholder="Name"></p>
@@ -80,16 +79,18 @@
 
     <!--  -->
     <div id ="Form">
-      <div id="templatebox" class="edittemplatebox">
-          <h1 id="greetings_result" style="text-align: center;">Your greeting here!</h1>
-          <div id="nameOutput" class="template">Name</div>
-          <h2>Your Invited to</h2>
-          <span id="birthdayPersonOutput" class="template">Afiq</span><span>'s Birthday</span>
-      		<p>On</p>
-          <span id="dateOutput" class="template">Date</span>
-      		<span>From </span><span id="timeOutput" class="template"> : - : </span>
-      		<p>At</p>
-          <div id="locationOutput" class="template">Location</div>
+      <div id = "templatearea" class="edittemplatebox">
+        <div id="templatebox" >
+            <h1 id="greetings_result" style="text-align: center;">Your greeting here!</h1>
+            <div id="nameOutput" class="template">Name</div>
+            <h2>Your Invited to</h2>
+            <span id="birthdayPersonOutput" class="template, birthday">Afiq</span><span class = "birthday">'s Birthday</span>
+        		<p>On</p>
+            <span id="dateOutput" class="template">Date</span>
+        		<span>From </span><span id="timeOutput" class="template"> : - : </span>
+        		<p>At</p>
+            <div id="locationOutput" class="template">Location</div>
+        </div>
       </div>
     </div>
 
@@ -104,8 +105,8 @@
     </div>
     <script src="./Home.js"></script>
     <script type="text/javascript">
-      styleOne.addEventListener("click",letter =>{document.getElementById("templatebox").style.backgroundImage = "url('./img/informal 1.png')";})
-      styleTwo.addEventListener("click",letter =>{document.getElementById("templatebox").style.backgroundImage = "url('./img/informal 2.png')";})
+      styleOne.addEventListener("click",letter =>{document.getElementById("templatearea").style.backgroundImage = "url('./img/informal 1.png')";})
+      styleTwo.addEventListener("click",letter =>{document.getElementById("templatearea").style.backgroundImage = "url('./img/informal 2.png')";})
 
       var input = document.getElementById("nameInput"); 	//inputnya
       var input2 = document.getElementById("dateInput");
@@ -151,11 +152,10 @@
       button.addEventListener('click',savetolocalstorage)
       button1.addEventListener('click',loadlocalstorage)
 
-      greetOne.addEventListener("click", letter => {document.getElementById("greetings_result").innerHTML = "Assalamu'alaikum Warahmatullahi Wabarakatuh";})
-      greetTwo.addEventListener("click", letter => {document.getElementById("greetings_result").innerHTML = "Salam Sejahtera!";})
-      greetThree.addEventListener("click", letter => {document.getElementById("greetings_result").innerHTML = "Hello!";})
-      greetFour.addEventListener("click", letter => {document.getElementById("greetings_result").innerHTML = "Greetings!";})
-      greetFive.addEventListener("click", letter => {document.getElementById("greetings_result").innerHTML = "Good Day!";})
+      greeting1.addEventListener("click", letter => {document.getElementById("greetings_result").innerHTML = "Assalamu'alaikum Warahmatullahi Wabarakatuh";})
+      greeting2.addEventListener("click", letter => {document.getElementById("greetings_result").innerHTML = "Good Day!";})
+      greeting3.addEventListener("click", letter => {document.getElementById("greetings_result").innerHTML = "Greetings!";})
+      greeting4.addEventListener("click", letter => {document.getElementById("greetings_result").innerHTML = "Hello!";})
 
     </script>
   </body>
