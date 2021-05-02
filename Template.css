@@ -11,13 +11,12 @@
   padding-top: 220px;
   width: 595px;
   height: 842px;
-  text-align: center;
-  border: solid;
   background-color: white;
 }
 
 #templatebox {
-
+	margin: auto;
+  text-align: center;
 }
 
 .edittemplatebox{
@@ -72,6 +71,15 @@ div.template {
 
 .selection{
   margin-top: 10px;
+}
+
+#templatebox{
+	text-align: center;
+}
+
+.birthday{
+	font-family: 'Lobster', cursive;
+	font-size: 50px;
 }
 
 /*----------------------------------------------------------------------------*/
