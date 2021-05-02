@@ -3,8 +3,80 @@
 	margin: 0;
 	box-sizing: border-box;
 }
-/*----------------------------------------------------------------------------*/
+/*-------------------------------shah's template------------------------------*/
+#template-area {
+  -webkit-flex: 3;
+  -ms-flex: 3;
+  flex: 3;
+  background-color: #f1f1f1;
+  padding: 10px;
+}
 
+#templatebox {
+  margin: auto;
+  padding-top: 220px;
+  width: 595px;
+  height: 842px;
+  text-align: center;
+  border: solid;
+  background-color: white;
+}
+
+.edittemplatebox{
+  background-size: 100% 100%;
+  width: 380px; height: 500px;
+  margin-bottom: 70px;
+  font-size: 0.8em;
+}
+
+div.template {
+  line-height: 70px;
+}
+
+.greetingsList{
+  width: 300px; height: 210px;
+  display: block;
+  margin-top: 10px; margin-left: auto; margin-right: auto;
+  text-align: center;
+}
+
+#greetOne:hover, #greetTwo:hover,
+#greetThree:hover, #greetFour:hover, #greetFive:hover{
+  background-color: grey;
+  color: #D1ddd9;
+}
+
+#nameOutput{
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.selection{
+  width: 280px; height: 220px;
+  margin-top: 20px; margin-left: auto; margin-right: auto;
+  text-align: center;
+  border: 2px solid;
+}
+
+.selection h3{
+  font-size: 1.3em;
+}
+
+.selection img{
+  display: inline-block;
+  margin-left: 5px;
+  width: 100px; height: 140px;
+}
+
+.selection img:hover{
+  border: 2px solid black;
+}
+
+.selection{
+  margin-top: 10px;
+}
+
+/*----------------------------------------------------------------------------*/
 body {
 	background-image: url(./img/Background.png);
   background-repeat: no-repeat center fixed;
@@ -202,6 +274,12 @@ body {
 
 p{
   width: 400px;
+}
+
+.TextBox{
+	background: #ccc;
+	padding: 20px;
+	text-align: center;
 }
 
 /*---------------------------------END Text-----------------------------------*/
