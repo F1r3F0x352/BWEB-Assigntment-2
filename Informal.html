@@ -63,7 +63,8 @@
           <p><label> </label><input type="text" id="nameInput" placeholder="Name"></p>
           <p><label> </label><input type="text" id="birthdayPersonInput" placeholder="Afiq"/></p>
       		<p><label> </label><input type="date" id="dateInput" placeholder="Date"></p>
-      		<p><label> </label><input type="text" id="timeInput" placeholder="Time"></p>
+      		<p><label> </label><input type="time" id="timeInput" placeholder="Time"></p>
+          <p><label> </label><input type="time" id="timeInput2" placeholder="Time"></p>
           <p><label> </label><input type="text" id="locationInput" placeholder="Location"></p>
           <button class="button">Save</button>
           <button class="button1">Load previous input data</button>
@@ -85,16 +86,17 @@
     <!--FORM-->
     <div id ="Form">
       <div id = "templatearea" class="edittemplatebox">
-        <div id="templatebox" >
-            <h1 id="greetings_result" style="text-align: center;">Your greeting here!</h1>
-            <div id="nameOutput" class="template">Name</div>
-            <h2>Your Invited to</h2>
+        <div id="templatebox" style="text-align: center">
+            <h1 id="greetings_result" class="location" style="text-align: center;">Your greeting here!</h1>
+            <div id="nameOutput" class="template, normaltext">Name</div>
+            <h2 class="normaltext">You are invited to</h2>
             <span id="birthdayPersonOutput" class="template, birthday">Afiq</span><span class = "birthday">'s Birthday</span>
-        		<p>On</p>
-            <span id="dateOutput" class="template">Date</span>
-        		<span>From </span><span id="timeOutput" class="template"> : - : </span>
-        		<p>At</p>
-            <div id="locationOutput" class="template">Location</div>
+            <br /><span class="normaltext">On</span><br />
+            <span id="dateOutput" class="template, time">Date</span><br />
+        		<span class="normaltext">From </span><span id="timeOutput" class="template, time">00.00</span>
+            <span class="normaltext"> To </span><span id="timeOutput2" class="template, time"> 00.00 </span>
+        		<br /><span class="normaltext">At</span><br />
+            <div id="locationOutput" class="template, location">Location</div>
         </div>
       </div>
     </div>
