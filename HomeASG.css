@@ -405,6 +405,13 @@ img{
       text-align: center;
 
 }
+
+#header .nav-list ul a{
+	font-size: 1em;
+}
+#header .nav-list ul a::after{
+	font-size: 4em;
+}
 /*-------------------------------END MOBILE-----------------------------------*/
 
 /*---------------------------------DESKTOP------------------------------------*/
