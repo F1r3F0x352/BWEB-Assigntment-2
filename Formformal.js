@@ -45,7 +45,7 @@ var loadlocalstorage = load =>{
 button.addEventListener('click',savetolocalstorage)
 button1.addEventListener('click',loadlocalstorage)
 
-greeting1.addEventListener("click", letter => {document.getElementById("greetings_result").innerHTML = "Assalamu'alaikum Warahmatullahi Wabarakatuh";})
+greeting1.addEventListener("click", letter => {document.getElementById("greetings_result").innerHTML = "Assalamu'alaikum<br /> Warahmatullahi Wabarakatuh";})
 greeting2.addEventListener("click", letter => {document.getElementById("greetings_result").innerHTML = "Good Day!";})
 greeting3.addEventListener("click", letter => {document.getElementById("greetings_result").innerHTML = "Greetings!";})
 greeting4.addEventListener("click", letter => {document.getElementById("greetings_result").innerHTML = "Hello!";})
