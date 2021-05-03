@@ -1,0 +1,81 @@
+#sidebar {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  background: #ccc;
+  padding: 20px;
+  text-align: center;
+}
+
+#template-area {
+  -webkit-flex: 3;
+  -ms-flex: 3;
+  flex: 3;
+  background-color: #f1f1f1;
+  padding: 10px;
+}
+
+#templatebox {
+  margin: auto;
+  padding-top: 220px;
+  width: 595px;
+  height: 842px;
+  text-align: center;
+  border: solid;
+  background-color: white;
+}
+
+.edittemplatebox{
+  background-size: 100% 100%;
+  width: 380px; height: 500px;
+  margin-bottom: 70px;
+  font-size: 0.8em;
+}
+
+div.template {
+  line-height: 70px;
+}
+
+.greetingsList{
+  width: 300px; height: 210px;
+  display: block;
+  margin-top: 10px; margin-left: auto; margin-right: auto;
+  text-align: center;
+}
+
+#greetOne:hover, #greetTwo:hover,
+#greetThree:hover, #greetFour:hover, #greetFive:hover{
+  background-color: #1F201F;
+  border-radius: 20px;
+  color: yellow;
+}
+
+#nameOutput{
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.selection{
+  width: 280px; height: 220px;
+  margin-top: 20px; margin-left: auto; margin-right: auto;
+  text-align: center;
+  border: 2px solid;
+}
+
+.selection h3{
+  font-size: 1.3em;
+}
+
+.selection img{
+  display: inline-block;
+  margin-left: 5px;
+  width: 100px; height: 140px;
+}
+
+.selection img:hover{
+  border: 2px solid black;
+}
+
+.selection{
+  margin-top: 10px;
+}

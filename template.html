@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>CSS Template</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+  background-color: #666;
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+
+/* Container for flexboxes */
+section {
+  display: -webkit-flex;
+  display: flex;
+}
+
+/* Style the navigation menu */
+#sidebar {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  background: #ccc;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Style the content */
+#template-area {
+  -webkit-flex: 3;
+  -ms-flex: 3;
+  flex: 3;
+  background-color: #f1f1f1;
+  padding: 10px;
+}
+
+#templatebox {
+  margin: auto;
+  padding-top: 220px;
+  width: 595px;
+  height: 842px;
+  text-align: center;
+  border: solid;
+  background-color: white;
+}
+
+.edittemplatebox{
+  background-size: 100% 100%;
+  width: 380px; height: 500px;
+  margin-bottom: 70px;
+  font-size: 0.8em;
+}
+
+div.template {
+  line-height: 70px;
+}
+
+.greetingsList{
+  width: 300px; height: 210px;
+  display: block;
+  margin-top: 10px; margin-left: auto; margin-right: auto;
+  text-align: center;
+}
+
+#greetOne:hover, #greetTwo:hover,
+#greetThree:hover, #greetFour:hover, #greetFive:hover{
+  background-color: #1F201F;
+  border-radius: 20px;
+  color: yellow;
+}
+
+#nameOutput{
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.selection{
+  width: 280px; height: 220px;
+  margin-top: 20px; margin-left: auto; margin-right: auto;
+  text-align: center;
+  border: 2px solid;
+}
+
+.selection h3{
+  font-size: 1.3em;
+}
+
+.selection img{
+  display: inline-block;
+  margin-left: 5px;
+  width: 100px; height: 140px;
+}
+
+.selection img:hover{
+  border: 2px solid black;
+}
+
+.selection{
+  margin-top: 10px;
+}
+
+/* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
+@media (max-width: 600px) {
+  section {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+}
+</style>
+</head>
+
+<body>
+<header>
+  <h2>Testing</h2>
+</header>
+
+<section>
+  <div id="sidebar">
+    <div class="selection">
+      <h3>Choose your background:</h3>
+      <img src="informal 1.png" id="styleOne">
+      <img src="informal 2.png" id="styleTwo">
+    </div>
+
+    <div class="greetingsList">
+      <h3>Click on greetings list below to insert on preview cards</h3>
+      <div id="greetOne" class="gList"style="margin-top:10px;">Assalamu'alaikum Warahmatullahi Wabarakatuh</div>
+      <div id="greetTwo" class="gList"style="margin-top:10px;">Salam Sejahtera!</div>
+      <div id="greetThree" class="gList"style="margin-top:10px;">Hello!</div>
+      <div id="greetFour" class="gList"style="margin-top:10px;">Greetings!</div>
+      <div id="greetFive" class="gList"style="margin-top:10px;">Good day!</div>
+    </div>
+
+      <p><label> </label><input type="text" id="nameInput" placeholder="Name"></p>
+      <p><label> </label><input type="text" id="birthdayPersonInput" placeholder="Afiq"/></p>
+  		<p><label> </label><input type="date" id="dateInput" placeholder="Date"></p>
+  		<p><label> </label><input type="text" id="timeInput" placeholder="Time"></p>
+      <p><label> </label><input type="text" id="locationInput" placeholder="Location"></p>
+      <button class="button">Save</button>
+      <button class="button1">Load previous input data</button>
+  </div>
+
+  <div id="template-area">
+    <div id="templatebox" class="edittemplatebox">
+        <h1 id="greetings_result" style="text-align: center;">Your greeting here!</h1>
+        <div id="nameOutput" class="template">Name</div>
+        <h2>Your Invited to</h2>
+        <span id="birthdayPersonOutput" class="template">Afiq</span><span>'s Birthday</span>
+    		<p>On</p>
+        <span id="dateOutput" class="template">Date</span>
+    		<span>From </span><span id="timeOutput" class="template"> : - : </span>
+    		<p>At</p>
+        <div id="locationOutput" class="template">Location</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>Footer</p>
+</footer>
+
+</body>
+
+<script type="text/javascript">
+  styleOne.addEventListener("click",letter =>{document.getElementById("templatebox").style.backgroundImage = "url('informal 1.png')";})
+  styleTwo.addEventListener("click",letter =>{document.getElementById("templatebox").style.backgroundImage = "url('informal 2.png')";})
+
+  var input = document.getElementById("nameInput"); 	//inputnya
+  var input2 = document.getElementById("dateInput");
+  var input3 = document.getElementById("timeInput");
+  var input4 = document.getElementById("locationInput");
+  var input5 = document.getElementById("birthdayPersonInput");
+
+  var display = document.getElementById("nameOutput");		//outputnya or displaynya
+  var display2 = document.getElementById("dateOutput");
+  var display3 = document.getElementById("timeOutput");
+  var display4 = document.getElementById("locationOutput");
+  var display5 = document.getElementById("birthdayPersonOutput");
+
+  var button = document.querySelector('.button');		//buttton save
+  var button1 = document.querySelector('.button1');
+
+  input.addEventListener('input', letter =>{display.textContent = letter.target.value;}) //apa yang ia taip arh "inputnya" ia kluar arah text which is "display"
+  input2.addEventListener('input', letter2 =>{display2.textContent = letter2.target.value;})
+  input3.addEventListener('input', letter3 =>{display3.textContent = letter3.target.value;})
+  input4.addEventListener('input', letter4 =>{display4.textContent = letter4.target.value;})
+  input5.addEventListener('input', letter5 =>{display5.textContent = letter5.target.value;})
+
+  var savetolocalstorage = save =>{
+    localStorage.setItem("nameInput",display.textContent)
+    localStorage.setItem("dateInput",display2.textContent)
+    localStorage.setItem("timeInput",display3.textContent)
+    localStorage.setItem("locationInput",display4.textContent)
+    localStorage.setItem("birthdayPersonInput",display5.textContent)
+  }
+  var loadlocalstorage = load =>{
+    nameInput.value = localStorage.getItem("nameInput")
+    dateInput.value = localStorage.getItem("dateInput")
+    timeInput.value = localStorage.getItem("timeInput")
+    locationInput.value = localStorage.getItem("locationInput")
+    birthdayPersonInput.value = localStorage.getItem("birthdayPersonInput")
+
+    nameOutput.innerHTML = localStorage.getItem("nameInput");
+    dateOutput.innerHTML = localStorage.getItem("dateInput");
+    timeOutput.innerHTML = localStorage.getItem("timeInput");
+    locationOutput.innerHTML = localStorage.getItem("locationInput");
+    birthdayPersonOutput.innerHTML = localStorage.getItem("birthdayPersonInput");
+  }
+  button.addEventListener('click',savetolocalstorage)
+  button1.addEventListener('click',loadlocalstorage)
+
+  greetOne.addEventListener("click", letter => {document.getElementById("greetings_result").innerHTML = "Assalamu'alaikum Warahmatullahi Wabarakatuh";})
+  greetTwo.addEventListener("click", letter => {document.getElementById("greetings_result").innerHTML = "Salam Sejahtera!";})
+  greetThree.addEventListener("click", letter => {document.getElementById("greetings_result").innerHTML = "Hello!";})
+  greetFour.addEventListener("click", letter => {document.getElementById("greetings_result").innerHTML = "Greetings!";})
+  greetFive.addEventListener("click", letter => {document.getElementById("greetings_result").innerHTML = "Good Day!";})
+
+</script>
+
+</html>
