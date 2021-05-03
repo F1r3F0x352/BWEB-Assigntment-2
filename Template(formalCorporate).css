@@ -83,26 +83,24 @@ div.template {
 }
 
 .birthday{
-	font-family: 'Lobster', cursive;
+	font-family: 'Arial';
 	font-size: 50px;
 }
 
 .time{
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Arial';
 	font-size: 30px;
 	line-height: 7vh;
-	font-weight: bold;
 }
 
 .normaltext{
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Arial';
 	font-size: 20px;
-	font-weight: bold;
 	line-height: 5vh;
 }
 
 .location{
-	font-family: 'Architects Daughter', cursive;
+	font-family: 'Arial';
 	font-size: 30px;
 	line-height: 7vh;
 }
