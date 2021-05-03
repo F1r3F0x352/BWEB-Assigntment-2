@@ -88,8 +88,6 @@ div.template {
 }
 
 .time{
-	/* font-family: 'Architects Daughter', cursive;
-	font-family: 'New Tegomin', serif;*/
 	font-family: 'Open Sans', sans-serif;
 	font-size: 30px;
 	line-height: 7vh;
@@ -375,7 +373,10 @@ h3{
 
 /*----------------------------------MOBILE------------------------------------*/
 @media only screen and (max-width:600px){
-  .container{
+	body{
+	overflow-x: hidden;
+}
+	.container{
     grid-template-columns: 1fr;
     grid-template-rows: 0.3fr 0.3fr 2.2fr 0.8fr 0.2fr;
     grid-template-areas:
@@ -418,6 +419,13 @@ h3{
 	.location{
 		font-size: 20px;
 		line-height: 4vh;
+	}
+
+	#header .nav-list ul a{
+		font-size: 1em;
+	}
+	#header .nav-list ul a::after{
+		font-size: 4em;
 	}
 /*-------------------------------END MOBILE-----------------------------------*/
 
